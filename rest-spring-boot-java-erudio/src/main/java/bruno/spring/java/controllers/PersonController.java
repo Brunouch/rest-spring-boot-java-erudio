@@ -1,8 +1,6 @@
-package bruno.spring.java;
+package bruno.spring.java.controllers;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import bruno.spring.java.exceptions.UnsupportedMathOperationException;
 import bruno.spring.java.models.Person;
-import bruno.spring.java.services.PersonServices;
+import bruno.spring.java.services.PersonServices;	
 
 @RestController
 @RequestMapping("/person")
@@ -22,8 +19,7 @@ public class PersonController {
     @Autowired
 	private PersonServices service;
 	
-	@RequestMapping(method=RequestMethod.GET,
-			produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(method=RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Person> findAll() {
 		return service.findAll();
 	} 
@@ -31,7 +27,7 @@ public class PersonController {
 	@RequestMapping(value = "/{id}",
 			method=RequestMethod.GET,
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person findById(@PathVariable(value = "id") String id) {
+	public Person findById(@PathVariable(value = "id") Long id) {
 		return service.findById(id);
 	}
 	
@@ -52,7 +48,7 @@ public class PersonController {
 	
 	@RequestMapping(value = "/{id}",
 			method=RequestMethod.DELETE)
-	public void delete(@PathVariable(value = "id") String id) {
+	public void delete(@PathVariable(value = "id") Long id) {
 		service.delete(id);
 	}
  
