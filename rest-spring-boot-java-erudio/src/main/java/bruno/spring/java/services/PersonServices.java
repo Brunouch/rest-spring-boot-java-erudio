@@ -6,9 +6,11 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import bruno.spring.java.dataVio.PersonVO;
+import bruno.spring.java.dataVoV1.PersonVO;
+import bruno.spring.java.dataVoV2.PersonVoV2;
 import bruno.spring.java.exceptions.ResourceNotFoundException;
 import bruno.spring.java.mapper.DozerMapper;
+import bruno.spring.java.mapper.mapperCustom.PersonMapper;
 import bruno.spring.java.models.Person;
 import bruno.spring.java.repositories.PersonRepository;
 
@@ -20,6 +22,9 @@ public class PersonServices {
 	
 	@Autowired
 	PersonRepository repository;
+
+	@Autowired
+	PersonMapper mapper;
 
 	public List<PersonVO> findAll() {
 
@@ -43,6 +48,16 @@ public class PersonServices {
 		
 		var entity = DozerMapper.parseObject(person, Person.class);
 		var vo =  DozerMapper.parseObject(repository.save(entity), PersonVO.class);
+
+		return vo;
+	}
+
+	public PersonVoV2 createV2(PersonVoV2 person) {
+
+		logger.info("Creating one person with V2!");
+		
+		var entity = mapper.convertVoToEntity(person);
+		var vo =  mapper.convertEntityToVo(repository.save(entity));
 
 		return vo;
 	}

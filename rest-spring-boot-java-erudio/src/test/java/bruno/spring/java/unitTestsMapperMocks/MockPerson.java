@@ -3,7 +3,7 @@ package bruno.spring.java.unitTestsMapperMocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import bruno.spring.java.dataVio.PersonVO;
+import bruno.spring.java.dataVoV1.PersonVO;
 import bruno.spring.java.models.Person;
 
 public class MockPerson {

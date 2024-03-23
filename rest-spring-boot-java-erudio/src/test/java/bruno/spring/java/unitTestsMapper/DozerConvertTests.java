@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import com.github.dozermapper.core.DozerConverter;
 
-import bruno.spring.java.dataVio.PersonVO;
+import bruno.spring.java.dataVoV1.PersonVO;
 import bruno.spring.java.mapper.DozerMapper;
 import bruno.spring.java.models.Person;
 import bruno.spring.java.unitTestsMapperMocks.MockPerson;

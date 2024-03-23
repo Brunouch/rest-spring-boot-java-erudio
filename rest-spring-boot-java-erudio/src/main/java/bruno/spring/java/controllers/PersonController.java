@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import bruno.spring.java.dataVio.PersonVO;
+import bruno.spring.java.dataVoV1.PersonVO;
+import bruno.spring.java.dataVoV2.PersonVoV2;
 import bruno.spring.java.services.PersonServices;	
 
 @RestController
@@ -36,6 +37,11 @@ public class PersonController {
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public PersonVO create(@RequestBody PersonVO person) {
 		return service.create(person);
+	}
+
+	@PostMapping(value = "/v2", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public PersonVoV2 createV2(@RequestBody PersonVoV2 person) {
+		return service.createV2(person);
 	}
 	
 	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
