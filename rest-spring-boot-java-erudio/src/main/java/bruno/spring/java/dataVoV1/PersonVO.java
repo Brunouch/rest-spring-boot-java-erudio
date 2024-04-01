@@ -2,11 +2,12 @@ package bruno.spring.java.dataVoV1;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 
 public class PersonVO implements Serializable {
     private static final long serialVersionUID = 1L;
