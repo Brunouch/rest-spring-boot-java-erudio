@@ -18,7 +18,7 @@ import bruno.spring.java.dataVoV2.PersonVoV2;
 import bruno.spring.java.services.PersonServices;	
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
     
     @Autowired
