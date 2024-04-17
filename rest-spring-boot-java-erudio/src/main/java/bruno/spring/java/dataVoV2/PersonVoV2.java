@@ -2,14 +2,12 @@ package bruno.spring.java.dataVoV2;
 
 import java.util.Date;
 
-import bruno.spring.java.dataVoV1.PersonVO;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 public class PersonVoV2 {
     
-    private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

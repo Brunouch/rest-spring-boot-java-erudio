@@ -20,14 +20,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 import bruno.spring.java.dataVoV1.BookVO;
-import bruno.spring.java.dataVoV1.PersonVO;
 import bruno.spring.java.exceptions.RequiredObjectIsNullException;
 import bruno.spring.java.models.Book;
-import bruno.spring.java.models.Person;
 import bruno.spring.java.repositories.BookRepository;
 import bruno.spring.java.services.BookService;
 import bruno.spring.java.unitTestsMapperMocks.MockBook;
-import bruno.spring.java.unitTestsMapperMocks.MockPerson;
 
 @TestInstance(Lifecycle.PER_CLASS)
 @ExtendWith(MockitoExtension.class)

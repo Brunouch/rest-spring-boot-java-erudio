@@ -8,7 +8,6 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.github.dozermapper.core.DozerConverter;
 
 import bruno.spring.java.dataVoV1.PersonVO;
 import bruno.spring.java.mapper.DozerMapper;

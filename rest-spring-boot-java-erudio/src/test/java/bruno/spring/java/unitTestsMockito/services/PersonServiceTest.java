@@ -18,7 +18,6 @@ import bruno.spring.java.services.PersonServices;
 import bruno.spring.java.unitTestsMapperMocks.MockPerson;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.notNull;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
