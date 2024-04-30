@@ -10,7 +10,8 @@ import bruno.spring.java.repositories.UserRepository;
 
 @Service
 public class UserService implements UserDetailsService{
-    private Logger logger = Logger.getLogger(PersonServices.class.getName());
+
+    private Logger logger = Logger.getLogger(UserService.class.getName());
 
 	@Autowired
 	UserRepository repository;

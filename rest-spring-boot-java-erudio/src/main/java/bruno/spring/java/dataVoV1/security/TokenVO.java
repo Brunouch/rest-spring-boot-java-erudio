@@ -27,9 +27,7 @@ public class TokenVO implements Serializable{
         this.refreshToken = refreshToken;
     }
 
-    public static long getSerialversionuid() {
-        return serialVersionUID;
-    }
+    
 
     public String getUsername() {
         return username;
